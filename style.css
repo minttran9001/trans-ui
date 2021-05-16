@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-orange: #F26522;
+    --dark-blue: #3A4D69;
+    --light-blue: #83969F;
+    --light-grey: #B6B6B6;
+    --footer-bg: #323339;
+    --raleway: 'Raleway', sans-serif;
+    --opensans: 'Open Sans', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    transition: all .5s;
+    transform: translateX(-120%);
+
+    z-index: 1000;
+}
+
+.logo-area {
+
+    width: 100vw;
+    height: 80px;
+    z-index: 10001;
+    position: fixed;
+
+}
+
+.logo {
+    transform: rotate(-90deg);
+
+    margin-right: 60px;
+
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.menu {
+    background-color: var(--dark-blue);
+
+    height: 100vh;
+    width: 70vw;
+    padding: 20px;
+
+    transition: all .5s;
+    box-shadow: 30px 0px 58px -8px rgba(0, 0, 0, 0.34);
+    -webkit-box-shadow: 30px 0px 58px -8px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 30px 0px 58px -8px rgba(0, 0, 0, 0.34);
+}
+
+.header.is-open {
+    transform: translateX(0);
+
+}
+
+.menu-btn {
+    padding: 30px 20px;
+
+    left: 0;
+    position: absolute;
+}
+
+.menu-btn i {
+    color: var(--color-orange);
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.menu-btn .close {
+    display: none;
+}
+
+.menu-btn.is-open {
+    pointer-events: initial;
+}
+
+.menu-btn.is-open .open {
+    display: none;
+}
+
+.menu-btn.is-open .close {
+    display: block;
+}
+
+.nav-list {
+    padding-top: 100px;
+
+    list-style: none;
+    font-family: var(--raleway);
+    font-size: 15px;
+}
+
+.nav-item {
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-item::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 0%;
+    transition: all .5s;
+    height: 3px;
+    left: 0;
+    background-color: var(--color-orange);
+
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* End header */
+.padding-left {
+    padding: 0 20px;
+}
+
+.hero {
+    width: 100vw;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: initial;
+    background-image: url("image/Masthead.jpg");
+}
+
+.hero-text {
+    position: relative;
+    font-family: var(--raleway);
+
+}
+
+.hero-text::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    top: -30px;
+    position: absolute;
+    background-color: #707070;
+    opacity: .5;
+}
+
+.arrow-btn {
+    cursor: pointer;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn .line {
+    margin-right: 50px;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.hero-text::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    bottom: -30px;
+    position: absolute;
+    background-color: #707070;
+    opacity: .5;
+
+}
+
+.hero-text .main-text {
+    font-size: 45px;
+    line-height: 48px;
+    text-transform: uppercase;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.hero-text .sub-text {
+    font-family: var(--opensans);
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.bright-article {
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 72px;
+}
+
+.bright-article.padding-left {
+    padding: 0;
+}
+
+.article {
+    width: 100%;
+    height: 100%;
+
+}
+
+.article-btn {
+    margin-right: 100px;
+
+    display: flex;
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.article-btn>div {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.grid-1 {
+    background-color: var(--color-orange);
+    color: white;
+    padding: 0;
+}
+
+.grid-1,
+.grid-3 {
+    padding: 20px;
+
+}
+
+.grid-1 .title {
+    width: 212px;
+
+}
+
+.grid-2 img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+
+    font-family: var(--raleway);
+    font-size: 35px;
+    line-height: 39px;
+    margin-bottom: 25px;
+}
+
+.grid-item p {
+    margin-bottom: 20px;
+    font-family: var(--opensans);
+    font-size: 14px;
+    line-height: 23px
+}
+
+.grid-3 .title {
+    color: var(--dark-blue);
+}
+
+.grid-3 p {
+    color: var(--light-blue);
+}
+
+.tweet {
+    display: flex;
+    align-items: center;
+    margin-top: 42px;
+}
+
+.tweet a {
+    color: var(--light-grey);
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+.text-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20px;
+    font-family: var(--raleway);
+    margin-bottom: 25px;
+    line-height: 35px;
+}
+
+.light-text {
+    font-size: 14px;
+    font-family: var(--opensans);
+    line-height: 27px;
+    color: var(--light-grey);
+    margin-bottom: 25px;
+    font-weight: lighter;
+}
+
+.dark-text {
+    line-height: 27px;
+    color: var(--light-blue);
+    margin-bottom: 25px;
+    font-size: 12px;
+
+    font-family: var(--opensans);
+}
+
+.word-article {
+    background-image: url("image/bridge.jpg");
+    width: 100vw;
+    display: flex;
+    height: 400px;
+    align-items: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-item {
+    padding: 20px;
+    color: white;
+}
+
+.article-item {
+    width: 150px;
+    height: 200px;
+    background-color: var(--color-orange);
+}
+
+.image-item img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.orange-bg {
+    padding: 20px;
+    background-color: var(--color-orange);
+}
+
+.text-article.orange-bg p {
+    color: white;
+}
+
+.sign-up-form{
+    width: 100%;
+    height:266px;
+    background-color: var(--footer-bg);
+}
+
+.top-50 {
+    width: 100%;
+    transform: translateY(-120px)
+}
+
+@media screen and (min-width:876px) {
+    .header {
+        justify-content: space-between;
+        transform: translateX(0);
+    }
+
+    .logo {
+        transform: inherit;
+        margin-right: 60px;
+    }
+
+    .logo-area {
+        height: 0;
+        margin-top: 58px;
+    }
+
+    .menu {
+        background-color: transparent;
+        transform: translateX(0);
+        box-shadow: none;
+
+        height: initial;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+
+    .padding-left {
+        padding-left: 174px;
+    }
+
+    .nav-list {
+        padding: 0;
+        padding-top: 58px;
+    }
+
+    .nav-item {
+        display: inline-block;
+        margin-right: 30px;
+        padding: 0 0px 10px 0;
+        text-transform: uppercase;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    /*End Header section */
+
+    .hero {
+        height: 1243px;
+        align-items: flex-start;
+    }
+
+    .hero-text {
+        margin-top: 475px;
+
+    }
+
+    .hero-text .sub-text {
+        width: 400px;
+    }
+
+    .top-50 {
+        width: 100%;
+        transform: translateY(-388px)
+    }
+
+    .bright-article {
+        display: flex;
+        padding-right: 0;
+    }
+
+    .bright-article.padding-left {
+        padding-left: 174px;
+    }
+
+    .article-btn {
+        width: initial;
+        padding: 0;
+    }
+
+    /* .bright-article{
+        height:775px;
+        width: 100%;
+        padding-right: 0;
+    }
+    .article{
+        background:var(--color-orange);
+        width: 100%;
+        height:100%;
+    } */
+    .article {
+        display: grid;
+        justify-items: stretch;
+        align-items: stretch;
+        height: 775px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+    }
+
+    .grid-1 {
+        grid-row: span 2;
+        color: white;
+
+        background-color: var(--color-orange)
+    }
+
+    .grid-1 .title {
+        width: initial;
+
+    }
+
+    .grid-1,
+    .grid-3 {
+        padding: 55px 55px 0 35px;
+    }
+
+    .grid-1 {
+        background-color: var(--color-orange);
+
+    }
+
+    .melbourne.padding-left {
+        padding-right: 174px;
+        margin: 65px;
+    }
+
+    .text-article {
+        gap: 25px;
+        flex-direction: row;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .light-text {
+        font-size: 18px;
+    }
+
+    .dark-text {
+        font-size: 14px;
+    }
+
+    .word-article {
+        background-size: cover;
+        height: 818px;
+        align-items: flex-end;
+    }
+
+    .article-item {
+        width: 459px;
+        height: 459px;
+    }
+
+    .text-item {
+        padding: 99px 60px;
+    }
+
+    .text-item p {
+        width: 70%;
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .padding-article{
+        margin-left: 174px;
+    }
+    .orange-bg {
+        padding: 65px 0px 65px 60px;
+
+    }
+}
