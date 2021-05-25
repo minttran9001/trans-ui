@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -21,8 +21,8 @@
   </head>
 
   <body>
-    <div class="header">
-      <div class="menu padding-left">
+    <header class="header">
+      <nav class="menu padding-left">
         <ul class="nav-list">
           <li class="nav-item">
             <a href="#" class="nav-link"> About </a>
@@ -61,9 +61,9 @@
             <a href="#" class="nav-link"> Contact </a>
           </li>
         </ul>
-      </div>
-    </div>
-    <div class="logo-area">
+      </nav>
+    </header>
+    <section class="logo-area">
       <div class="menu-btn">
         <i class="fas fa-bars open"></i>
         <i class="fas fa-times close"></i>
@@ -71,10 +71,10 @@
       <a href="#">
         <img src="image/logo-trans.png" alt="Trans Logo" class="logo" />
       </a>
-    </div>
-    <div class="hero padding-left">
+    </section>
+    <section class="hero padding-left">
       <div class="hero-text">
-        <p class="main-text">Sleek as fukuc</p>
+        <h1 class="main-text">Sleek as fukuc</h1>
         <p class="sub-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore
@@ -99,8 +99,8 @@
           </a>
         </div>
       </div>
-    </div>
-    <div class="bright-article padding-left">
+    </section>
+    <section class="padding-left bright-article ">
       <div class="article-btn padding-inside">
         <button data-tooltip="Previous Slide" class="white-arrow">
           <svg
@@ -137,7 +137,7 @@
       </div>
       <div class="article">
         <div class="grid-item grid-1 padding-inside">
-          <div class="title">BRIGHT ASS ORANGE</div>
+          <h1 class="title">BRIGHT ASS ORANGE</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -153,7 +153,7 @@
           <img src="image/mountain.jpg" alt="" />
         </div>
         <div class="grid-item grid-3 padding-inside">
-          <div class="title">FINALY A LAYOUT THAT BLOWS YOUR HEAD OFF</div>
+          <h1 class="title">FINALY A LAYOUT THAT BLOWS YOUR HEAD OFF</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -179,9 +179,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="melbourne padding-left padding-right">
-      <p class="title">MELBOURNE, AUSTRALIA</p>
+    </section>
+    <section class="melbourne padding-left padding-right">
+      <h1 class="title">MELBOURNE, AUSTRALIA</h1>
       <div class="text-article">
         <div class="left-article">
           <p class="light-text">
@@ -230,16 +230,16 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="word-article padding-left">
+    </section>
+    <section class="word-article padding-left">
       <div class="article-item text-item">
-        <p class="title">WORDS & SUCH</p>
+        <h1 class="title">WORDS & SUCH</h1>
       </div>
       <div class="article-item image-item">
         <img src="image/Thegirl.jpg" alt="" />
       </div>
-    </div>
-    <div class="padding-article padding-left padding-right">
+    </section>
+    <section class="padding-article padding-left padding-right">
       <div class="text-article orange-bg padding-inside">
         <div class="left-article">
           <p class="dark-text">
@@ -289,7 +289,7 @@
         </div>
       </div>
       <div class="sign-up padding-inside">
-        <div class="title">TAKE ACTION</div>
+        <h1 class="title">TAKE ACTION</h1>
         <form class="sign-up-form">
           <input type="text" placeholder="Name" />
           <input type="text" placeholder="Contact Phone" />
@@ -298,10 +298,10 @@
         </form>
       </div>
       <div class="black-white-bg"></div>
-    </div>
-    <div class="article this-article padding-left padding-right">
+    </section>
+    <section class="article this-article padding-left padding-right">
       <div class="grid-item grid-1 padding-inside">
-        <div class="title">OHH THIS IS NICE</div>
+        <h1 class="title">OHH THIS IS NICE</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -317,13 +317,13 @@
         <img src="image/mountain2.png" alt="" />
       </div>
       <div class="grid-item grid-3 padding-inside">
-        <div class="title">THE END IS NIGH, WELL THE FOOTER ANYWAYS</div>
+        <h1 class="title">THE END IS NIGH, WELL THE FOOTER ANYWAYS</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-    </div>
+    </section>
 
     <footer class="footer padding-left padding-right">
       <div class="footer-list">
@@ -450,7 +450,7 @@
     </footer>
   </body>
   <script type="text/javascript">
-    function Trans() {
+    function trans() {
       const header = document.querySelector(".header");
       const menuBtn = document.querySelector(".menu-btn");
       const hero = document.querySelector(".hero");
@@ -469,6 +469,6 @@
         }
       });
     }
-    Trans();
+    trans();
   </script>
 </html>
